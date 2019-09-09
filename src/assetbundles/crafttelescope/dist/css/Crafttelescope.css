@@ -1,0 +1,35 @@
+/**
+ * craft-telescope plugin for Craft CMS
+ *
+ * craft-telescope CSS
+ *
+ * @author    Simon Davies
+ * @copyright Copyright (c) 2019 Simon Davies
+ * @link      https://simon-davies.name/
+ * @package   Crafttelescope
+ * @since     0.0.1
+ */
+
+.welcome {
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.welcome h1 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.welcome .btn {
+    font-size: 14px;
+}
+
+.icon {
+    margin-bottom: 20px;
+}
+
+/* Hide save button */
+input.btn.submit {
+    display: none;
+}

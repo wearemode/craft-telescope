@@ -1,0 +1,40 @@
+{
+    "name": "wearemode/craft-telescope",
+    "description": "Take a peek into your Craft sites from a cloud dashboard",
+    "type": "craft-plugin",
+    "version": "0.0.1",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "craft-telescope"
+    ],
+    "support": {
+        "docs": "???",
+        "issues": "???"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Simon Davies",
+            "homepage": "https://simon-davies.name/"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "wearemode\\crafttelescope\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Craft Telescope",
+        "handle": "craft-telescope",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "???",
+        "class": "wearemode\\crafttelescope\\Crafttelescope"
+    }
+}

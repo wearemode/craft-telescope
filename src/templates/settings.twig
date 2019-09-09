@@ -1,0 +1,31 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * craft-telescope plugin for Craft CMS 3.x
+ *
+ * craft-telescope Settings.twig
+ *
+ * @author    Simon Davies
+ * @copyright Copyright (c) 2019 Simon Davies
+ * @link      https://simon-davies.name/
+ * @package   Crafttelescope
+ * @since     0.0.1
+ */
+#}
+
+{% set title = "Craft Telescope" %}
+
+{% do view.registerAssetBundle("wearemode\\crafttelescope\\assetbundles\\crafttelescope\\CrafttelescopeAsset") %}
+
+<div class="welcome">
+    <div class="icon">
+        {% set icon = craft.app.plugins.getPluginIconSvg('craft-telescope') %}
+        {{ svg(icon, sanitize=true) }}
+    </div>
+
+    <h1>Craft Telescope</h1>
+    <p>Thank you for installing Craft Telescope, please connect your site by clicking the button below. You will be redirected to our cloud panel and be asked to login or create an account.</p>
+
+    {% set site = craft.app.sites.getPrimarySite() %}
+    <a href="#" class="btn submit" id="telescope-connect" data-title="{{ site.name }}" data-url="{{ site.baseUrl }}" data-lang="{{ site.language }}">Connect to Craft Telescope</a>
+</div>
