@@ -2,7 +2,6 @@
     "name": "wearemode/craft-telescope",
     "description": "Take a peek into your Craft sites from a cloud dashboard",
     "type": "craft-plugin",
-    "version": "0.0.1",
     "keywords": [
         "craft",
         "cms",
@@ -11,8 +10,8 @@
         "craft-telescope"
     ],
     "support": {
-        "docs": "???",
-        "issues": "???"
+        "docs": "https://github.com/wearemode/craft-telescope/",
+        "issues": "https://github.com/wearemode/craft-telescope/issues"
     },
     "license": "MIT",
     "authors": [
