@@ -35,7 +35,7 @@ use craft\web\Controller;
  * @package   Crafttelescope
  * @since     0.0.1
  */
-class PackagesController extends Controller
+class PackagesController extends BaseController
 {
 
     // Protected Properties
@@ -59,7 +59,9 @@ class PackagesController extends Controller
      */
     public function actionIndex()
     {
-        // Convert update handles to Composer package names, and capture current versions
+	    $this->checkAuthentication();
+
+	    // Convert update handles to Composer package names, and capture current versions
         $pluginsService = Craft::$app->getPlugins();
 	    $updates = Craft::$app->getUpdates()->getUpdates(true);
 

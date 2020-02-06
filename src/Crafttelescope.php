@@ -21,6 +21,7 @@ use craft\web\UrlManager;
 use craft\events\RegisterUrlRulesEvent;
 
 use yii\base\Event;
+use yii\base\Security;
 
 /**
  * Craft plugins are very much like little applications in and of themselves. We’ve made
@@ -98,6 +99,8 @@ class Crafttelescope extends Plugin
             Plugins::EVENT_AFTER_INSTALL_PLUGIN,
             function (PluginEvent $event) {
                 if ($event->plugin === $this) {
+                	$security = new Security();
+                	Craft::$app->plugins->savePluginSettings($this, ['apiKey' => $security->generateRandomString()]);
                 	Craft::$app->getResponse()->redirect(
 		                UrlHelper::cpUrl('settings/plugins/craft-telescope')
 	                )->send();

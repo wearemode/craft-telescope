@@ -35,11 +35,11 @@ class Settings extends Model
     // =========================================================================
 
     /**
-     * Some field model attribute
+     * API Key used for external requests
      *
      * @var string
      */
-    public $someAttribute = 'Some Default';
+    public $apiKey = 'TOKEN';
 
     // Public Methods
     // =========================================================================
@@ -57,8 +57,8 @@ class Settings extends Model
     public function rules()
     {
         return [
-            ['someAttribute', 'string'],
-            ['someAttribute', 'default', 'value' => 'Some Default'],
+            ['apiKey', 'string'],
+            ['apiKey', 'default', 'value' => 'TOKEN'],
         ];
     }
 }

@@ -35,7 +35,7 @@ use craft\web\Controller;
  * @package   Crafttelescope
  * @since     0.0.1
  */
-class UpdatesController extends Controller
+class UpdatesController extends BaseController
 {
 
     // Protected Properties
@@ -59,7 +59,9 @@ class UpdatesController extends Controller
      */
     public function actionIndex()
     {
-        $site = Craft::$app->sites->getPrimarySite();
+		$this->checkAuthentication();
+
+    	$site = Craft::$app->sites->getPrimarySite();
 
         $data = [];
         $updates = Craft::$app->getUpdates()->getUpdates(true);

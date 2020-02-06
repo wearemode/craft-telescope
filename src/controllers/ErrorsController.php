@@ -35,7 +35,7 @@ use craft\web\Controller;
  * @package   Crafttelescope
  * @since     0.0.1
  */
-class ErrorsController extends Controller
+class ErrorsController extends BaseController
 {
 
     // Protected Properties
@@ -59,7 +59,9 @@ class ErrorsController extends Controller
      */
     public function actionIndex()
     {
-        $errors = Craft::$app->deprecator->getLogs();
+	    $this->checkAuthentication();
+
+	    $errors = Craft::$app->deprecator->getLogs();
 
         return $this->asJson([
             'count' => count($errors),
