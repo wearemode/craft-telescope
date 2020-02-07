@@ -27,5 +27,5 @@
     <p>Thank you for installing Craft Telescope, please connect your site by clicking the button below. You will be redirected to our cloud panel and be asked to login or create an account.</p>
 
     {% set site = craft.app.sites.getPrimarySite() %}
-    <a href="#" class="btn submit" id="telescope-connect" data-title="{{ site.name }}" data-url="{{ site.baseUrl }}" data-lang="{{ site.language }}" data-api-key="{{ settings.apiKey }}">Connect to Craft Telescope</a>
+    <a href="#" class="btn submit" id="telescope-connect" data-title="{{ site.name }}" data-url="{{ alias(site.baseUrl) }}" data-lang="{{ site.language }}" data-api-key="{{ settings.apiKey }}">Connect to Craft Telescope</a>
 </div>
