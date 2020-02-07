@@ -22,6 +22,7 @@ jQuery(document).ready(function($){
 			title: $(this).data('title'),
 			url: $(this).data('url'),
 			lang: $(this).data('lang'),
+			api_key: $(this).data('api-key'),
 		};
 		popupwindow('https://craft-telescope.io/sites/new?' + $.param(data), 'Craft Telescope', window, 600,600);
 	});
